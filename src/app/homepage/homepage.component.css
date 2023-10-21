@@ -1,0 +1,12 @@
+main {
+    height: 100vh;
+    background-image: url(https://cdn.pixabay.com/photo/2020/03/25/21/05/pizza-4968645_1280.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    padding-top: 12rem;
+}
+h1 {
+    font-family: 'Pacifico', cursive;
+}

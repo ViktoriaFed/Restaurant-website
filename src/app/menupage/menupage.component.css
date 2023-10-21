@@ -1,0 +1,11 @@
+.hero {
+    background-image: url(src/assets/images/Picture1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    width: 100%;
+}
+h1 {
+    font-family: 'Pacifico', cursive;
+}

@@ -1,0 +1,13 @@
+.container {
+    margin-left: 15rem;
+    padding-bottom: 5rem;
+    padding-top: 5rem;
+}
+.inputform {
+    width: 60%;
+    justify-content: center;
+}
+h3 {
+    font-family: 'Pacifico', cursive;
+}
+

@@ -1,0 +1,50 @@
+
+<div class="d-flex justify-content-center">
+    <div class="container">
+        <div class="p-3"><h3>Cart</h3></div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="card left p-1 m-3">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item text-center" *ngIf="isEmptyCart">Your cart is empty</li>
+                        <li class="list-group-item" *ngFor="let value of cart">
+                            <div>{{ value.name }}</div>
+                            <div>${{ value.price }}</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card right p-1 m-3">
+                    <p class="card-header">Summary</p>
+                    <p class="card-text pt-3">Total: ${{ total.toFixed(2) }}</p>
+                    <p class="card-text text-primary">Total with our service fee (10%): ${{ ((total * 0.10) + total).toFixed(2) }}</p>
+                    <p class="card-text text-danger">Discount (for orders more than $40): 15%</p><hr>
+                    <p class="card-text text-success fw-bold pb-2">Total amount: ${{ total2.toFixed(2) }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container mt-3 inputform">
+    <h3 class="pb-3">Order form</h3>
+    <form [formGroup]="contact">
+        <label for="name">Name:</label>
+        <input id="name" type="text" class="form-control" formControlName="name" />
+        <p class="text-danger" *ngIf="contact.controls.name.errors?.['required'] && contact.touched">Please insert your name</p>
+
+        <label for="email">Email:</label>
+        <input id="email" type="text" class="form-control" formControlName="email" />
+        <p class="text-danger" *ngIf="contact.controls.email.errors?.['minlength'] && contact.touched">Please insert your Email</p>
+
+        <label for="phone">Phone number:</label>
+        <input id="phone" type="text" class="form-control" formControlName="phone" />
+        <p class="text-danger" *ngIf="contact.controls.phone.errors?.['required'] && contact.touched">Please insert your phone number</p>
+
+        <button class="btn btn-dark bg-black text-white mt-3" type="submit" (click)="contactMe()">Submit</button>
+    </form>
+    <div id="after" class="text-success mt-3 fw-bold"></div>
+</div>
+
+
