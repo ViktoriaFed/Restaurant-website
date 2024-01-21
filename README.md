@@ -1,27 +1,24 @@
-# Cr3
+# Italian Restaurant Website - Angular Project
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.6.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Responsive Theme Design
+The final theme design is responsive, achieved using CSS and Bootstrap to ensure a seamless user experience across different devices.
+## Components
+The project comprises the following components:
+ - NavBar: Navigation bar for easy navigation across the website.
+ - Home: The main landing page of the website.
+ - Footer: Footer section providing additional information or links.
+ - About Us: Section providing information about the restaurant.
+ - Menu: Displaying the list of dishes available for order.
+ - Details: Detailed information about a specific dish.
+ - Cart: Component to view and manage the order cart.
+## Routing
+The application is implemented as a Single Page Application (SPA) with routing, allowing smooth navigation between components without refreshing the browser.
+## Dynamic UI
+Buttons ("Details" and "Order") are dynamically displayed based on the availability of each dish. If a dish is unavailable, only the dish picture is shown with a message indicating its unavailability.
+## Order Functionality
+Clicking on the "Order" button adds the selected dish to the cart. Users can place orders from both the Menu and Details components. The Order component displays the contents of the cart.
+## Details Component
+A Details component is created to provide specific information about a dish when the "Details" button is clicked. Users can also place orders directly from this component.
+## Bill Calculation
+The application calculates the total bill and includes a "Service" section that shows 10% of the total amount on top. If the total sum exceeds EUR 40, users receive a 15% discount. The original total and discounted price are displayed on the screen.
